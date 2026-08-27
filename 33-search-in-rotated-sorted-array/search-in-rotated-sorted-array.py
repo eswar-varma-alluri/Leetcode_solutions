@@ -2,12 +2,10 @@ class Solution:
     def search(self, nums: List[int], target: int) -> int:
         l=0
         h=len(nums)-1
-        a=-1
         while l<=h:
             mid=(l+h)//2
             if nums[mid]==target:
-                a=mid
-                return a
+                return mid
             elif nums[l]<=nums[mid]:
                 if target>=nums[l] and target<=nums[mid]:
                     h=mid-1
@@ -18,4 +16,4 @@ class Solution:
                     l=mid+1
                 else:
                     h=mid-1
-        return a
+        return -1
