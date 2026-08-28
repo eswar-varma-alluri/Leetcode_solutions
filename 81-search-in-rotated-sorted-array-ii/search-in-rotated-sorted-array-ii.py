@@ -6,9 +6,9 @@ class Solution:
             mid = (l + h) // 2
             if nums[mid] == target:
                 return True
-            elif nums[l] == nums[mid] and nums[mid] == nums[h]:
+            elif nums[l] == nums[mid]:
                 l += 1
-                h -= 1
+                continue
             elif nums[mid] >= nums[l]:
                 if nums[l] <= target < nums[mid]:
                     h = mid - 1
