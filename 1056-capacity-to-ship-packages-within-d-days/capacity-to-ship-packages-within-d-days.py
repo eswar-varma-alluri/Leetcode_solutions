@@ -19,4 +19,4 @@ class Solution(object):
                 h=mid
             else:
                 l=mid+1
-        return l
+        return h
